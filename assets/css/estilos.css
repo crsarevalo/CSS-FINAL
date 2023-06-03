@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;400;800&family=Newsreader:wght@800&display=swap');
+
+*{
+    margin: 0;
+    font-family: "Geologica",Arial, Helvetica, sans-serif;
+}
+
+h3 h2{
+    font-weight: 800;
+}
+
+p {
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    animation: bounce infinite 2.5s;
+}
+.logo p {
+    font-family: "Newsreader", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-6px);
+    }
+    20% {
+        transform: translateY(6px);
+    }
+    30% {
+        transform:translateY(-6px);
+    }
+    40% {
+        transform:translateY(6px);
+    }
+    50% {
+        transform:translateY(-6px);
+    }
+    60% {
+        transform:translateY(6px);
+    }
+    70% {
+        transform:translateY(-6px);
+    }
+    80% {
+        transform:translateY(4.4px);
+    }
+    90% {
+        transform:translateY(-4.4px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "nav" "main" "footer";
+    grid-template-rows: 22% auto 10%;
+    grid-template-rows: auto;
+
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #54B435;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    grid-area: main;
+    background-color:  #93e257af;
+    text-align: center;
+    
+}
+
+main img {
+    width: 18rem;
+    padding-top: 0.5rem;
+    filter: grayscale(100%);
+    transition: 0.3 s ease-out;
+    }
+
+main img:hover {
+    filter: none;
+    transform: scale(1.02);
+    transition: 0.3s ease-out;
+}
+
+.card {
+    grid-area: card;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color:  #529952;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+footer p {
+    font-size: x-small;
+}
+
+@media (min-width: 576px){
+    body{
+        grid-template-areas: "nav main" "nav main" "footer footer";
+        grid-template-columns: 22% auto;
+        grid-template-rows: auto auto 10%;
+        grid-template-rows: auto;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+    nav a{
+        padding-top: 1rem;
+    }
+    nav h3 {
+        padding-top: 3rem;
+    }
+
+    .carne {
+        display: flex;
+    }
+    .pollo {
+        display: flex;
+    }
+    .plant-based {
+        display: flex;
+    }
+    main h2{
+        padding-top: 1.5rem;
+    }
+}
